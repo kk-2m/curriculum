@@ -12,7 +12,7 @@ class PostController extends Controller
 		// viewインスタンスのwithメソッドを使い、viewに値を渡す
 		// blade内で使う変数を'posts'と設定
 		// 'posts'の中身にgetを使い、インスタンス化した$postを代入
-		return view('posts.index')->with(['posts' => $post->getByLimit()]);
+		return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);
 		
 	}
 }
