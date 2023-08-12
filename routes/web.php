@@ -22,4 +22,4 @@ Route::get('posts/{post}', [PostController::class, 'show']);
 
 Route::post('/posts', [PostController::class, 'store']);
 Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
-Route::put('/post/{post}', [PostController::class, 'update']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
