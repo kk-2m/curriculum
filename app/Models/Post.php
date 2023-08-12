@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'title',
+        'body'
+        ];
+    
     public function getPaginateByLimit(int $limit_count = 5)
     {
         // update_atで降順に並べた後、limitで件数制限をかける
