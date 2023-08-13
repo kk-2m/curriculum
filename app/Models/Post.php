@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
     use HasFactory;
+    use SoftDeletes;
     
     protected $fillable = [
         'title',
@@ -20,4 +22,5 @@ class Post extends Model
         // orderBy('ソートするキー', '並べ方') ＊並べ方：ASC(昇順), DESK(降順)
         return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
+
 }
