@@ -18,11 +18,12 @@
 			<div class='content_post'>
 				<h3>本文</h3>
 				<p class='body'>{{ $post->body }}</p>
+				<a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
 			</div>
-		</div>
+		</div><br>
 		<div calss='edit'>
 			<a href="/posts/{{ $post->id }}/edit">edit</a>
-		</div>
+		</div><br>
 		<div class='footer'>
 			<a href="/">back</a>
 		</div>
