@@ -13,10 +13,10 @@ class PostController extends Controller
 	{
 		// クライアントインスタンス生成
 		$client = new \GuzzleHttp\Client();
-		　
+		
 		// GET通信するURL
-		$url = 'https://teratail.com/api/v1/questios';
-		　
+		$url = 'https://teratail.com/api/v1/questions';
+		
 		// リクエスト送信と返却データの取得
 		// Bearerトークンにアクセストークンを指定して認証を行う
 		$response = $client->request(
